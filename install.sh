@@ -21,9 +21,9 @@ count=$(cat /boot/config.txt | grep -c "dtoverlay=disable-wifi")
 	sudo echo "dtoverlay=disable-wifi" >> /boot/config.txt
 }
 
-count=$(cat /boot/config.txt | grep -c "dtoverlay=disable-spidev")
+count=$(cat /boot/config.txt | grep -c "dtoverlay=newracom")
 [ $count = "0" ] && {
-	sudo echo "dtoverlay=disable-spidev" >> /boot/config.txt
+	sudo echo "dtoverlay=newracom" >> /boot/config.txt
 }
 
 count=$(cat /etc/modules | grep -c "mac80211")
